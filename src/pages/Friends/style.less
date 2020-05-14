@@ -1,0 +1,36 @@
+.index {
+  >div {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 0px 5px @box-shadow-bg-me;
+    padding: 20px;
+  }
+}
+
+.indexNav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  >div {
+    &:nth-of-type(2) {
+      width: calc(~'100% - 180px');
+    }
+  }
+}
+
+.indexBody {
+  width: 100%;
+  padding: 50px calc(~'(100% - 1200px)/2');
+  height: calc(~'100vh - 185px');
+  overflow: auto;
+  border-radius: 0px !important;
+
+  >div {
+    float: left;
+    margin: 20px calc(~'(100% - 3*300px)/6');
+    box-shadow: 0 0px 5px @box-shadow-bg-me;
+  }
+}
