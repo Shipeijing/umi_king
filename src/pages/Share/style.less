@@ -1,9 +1,15 @@
+.content{
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 .index {
   width: 100%;
-
+  
   >div {
     &:nth-of-type(4) {
-      height: calc(~'100vh - 185px');
+      height: calc(~'100vh - 230px');
       overflow: auto;
       border-radius: 0px !important;
     }
@@ -35,12 +41,12 @@
 }
 
 .navBut {
-  position: fixed;
+  position: absolute;
   width: 120px !important;
   background: none !important;
   box-shadow: none !important;
   left: calc(~'5% - 0px');
-  top: 205px;
+  top: 115px;
   margin: 0 auto !important;
   padding: 0 !important;
 
@@ -50,12 +56,12 @@
 }
 
 .navright {
-  position: fixed;
+  position: absolute;
   width: 250px !important;
   background: none !important;
   box-shadow: none !important;
   right: calc(~'5% + 0px');
-  top: 190px;
+  top: 90px;
   margin: 0 auto !important;
   padding: 0 !important;
 }

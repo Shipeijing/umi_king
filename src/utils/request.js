@@ -1,10 +1,11 @@
-import {request } from 'umi';
+import { request } from 'umi';
 
 function parseJSON(response) {
   return response.json();
 }
 
 function checkStatus(response) {
+  return response;
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -24,10 +25,9 @@ const headers = {
  * @return {object}           An object containing either "data" or "err"
  */
 
-export default function(url, method, data) {
+export default function (url, method, data) {
   return request(url, { method, headers, body: JSON.stringify(data) })
     .then(checkStatus)
-    .then(parseJSON)
     .then(data => ({ data }))
     .catch(err => ({ err }));
 }

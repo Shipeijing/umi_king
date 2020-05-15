@@ -1,13 +1,12 @@
 import request from '../utils/request';
 import api from '../utils/api';
 export default {
-    async login(data){
-        const rData={
-            taskCode:data.code,
-            phoneNumber:data.number,
-            country:data.country
+    login(data) {
+        const rData = {
+            Uid: data.Uid,
+            Pwd: data.Pwd
         }
-       const req =await request(api.login, 'POST', rData);
-         return req
+        const req = request(api.login, 'POST', rData);
+        return req
     }
 }

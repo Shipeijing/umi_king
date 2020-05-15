@@ -7,7 +7,10 @@ const { Step } = Steps;
 function index(props) {
   const [pwd, setPwd] = useState(0);
   const onFinish = values => {
-    console.log('Success:', values);
+    props.dispatch({
+      type: 'UserActive/login',
+      payload: values,
+    });
   };
 
   const onFinishFailed = errorInfo => {
@@ -36,6 +39,7 @@ function index(props) {
     <div>
       <h1>欢迎登录</h1>
       <Form
+        style={{ color: '#ffffff' }}
         layout="vertical"
         name="basic"
         initialValues={{ remember: true }}
@@ -44,7 +48,7 @@ function index(props) {
       >
         <Form.Item
           label="手机号"
-          name="username"
+          name="Uid"
           rules={[{ required: true, message: 'Please input your username!' }]}
         >
           <Input
@@ -58,7 +62,7 @@ function index(props) {
 
         <Form.Item
           label="密码"
-          name="password"
+          name="Pwd"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Input.Password
@@ -79,17 +83,7 @@ function index(props) {
         </Form.Item>
 
         <Form.Item>
-          <Button
-            onClick={() => {
-              props.dispatch({
-                type: 'UserActive/login',
-                payload: props.UserData,
-              });
-            }}
-            style={{ width: '100%' }}
-            type="primary"
-            htmlType="submit"
-          >
+          <Button style={{ width: '100%' }} type="primary" htmlType="submit">
             提交
           </Button>
         </Form.Item>
@@ -100,7 +94,7 @@ function index(props) {
           onClick={() => {
             props.dispatch({
               type: 'UserActive/setStatus',
-              payload: 2,
+              payload: { status: 2 },
             });
           }}
         >
@@ -112,7 +106,7 @@ function index(props) {
           onClick={() => {
             props.dispatch({
               type: 'UserActive/setStatus',
-              payload: 1,
+              payload: { status: 1 },
             });
           }}
         >
@@ -158,7 +152,7 @@ function index(props) {
               onClick={() => {
                 props.dispatch({
                   type: 'UserActive/setStatus',
-                  payload: 0,
+                  payload: { status: 0 },
                 });
               }}
               style={{ width: '100%' }}
@@ -213,7 +207,7 @@ function index(props) {
           onClick={() => {
             props.dispatch({
               type: 'UserActive/setStatus',
-              payload: 0,
+              payload: { status: 0 },
             });
           }}
         >
@@ -224,7 +218,17 @@ function index(props) {
   );
   return (
     <div className={styles.index}>
-      {props.status === 0 ? Login : Registered}
+      <div>
+        <div>
+          <div>
+            <img src={require('../assets/img/logo.png')} alt="" />
+            <h1>斑 鹿</h1>
+            <p>自由在线社交平台，畅想欢快聊天，多种交友方式</p>
+            <p>认识身边的人，让机会更对，缘分更深！</p>
+          </div>
+          {props.status === 0 ? Login : Registered}
+        </div>
+      </div>
     </div>
   );
 }
