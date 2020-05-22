@@ -1,12 +1,19 @@
+@media screen and (max-width: 1500px) {
+  .index {
+    width: calc(~'100% - 40px') !important;
+  }
+}
+
 .index {
+  min-height: 600px;
   background: #ffffff;
   border-radius: 10px;
   width: 80%;
   max-width: 1300px;
-  margin: calc(~'50vh - 400px') auto 0 auto;
+  margin: 8vh auto 0 auto;
   box-shadow: 0 0px 5px @box-shadow-bg-me;
   padding: 20px;
-  height: 700px;
+  height: calc(~'100vh - 70px - 16vh');
   display: flex;
   align-items: center;
   flex-wrap: nowrap;

@@ -12,12 +12,13 @@ import {
   Divider,
 } from 'antd';
 import {
+  SearchOutlined,
+  TeamOutlined,
   EditOutlined,
   SettingOutlined,
   MessageOutlined,
   UserAddOutlined,
 } from '@ant-design/icons';
-const { Search } = Input;
 const { Meta } = Card;
 function IndexPage() {
   const dataList = [
@@ -52,32 +53,24 @@ function IndexPage() {
       </Button>
     </div>
   );
-  function onChange(e) {
-
-  }
+  function onChange(e) {}
   return (
     <div className={styles.index}>
       <div className={styles.indexNav}>
         <div>
-          <Radio.Group
-            size={'middle'}
-            onChange={onChange}
-            defaultValue="a"
-            buttonStyle="solid"
-          >
-            <Radio.Button value="a">热点</Radio.Button>
-            <Radio.Button value="b">最新</Radio.Button>
-          </Radio.Group>
+          <TeamOutlined /> ：500/人
         </div>
         <div>
-          <Search
+          <img src={require('../../assets/img/logob.png')} alt="" />
+        </div>
+        <div>
+          <Input
             size={'middle'}
+            suffix={<SearchOutlined />}
             placeholder="input search text"
             onSearch={value => console.log(value)}
-            style={{ width: '100%' }}
+            style={{ width: '50%', marginRight: 20 }}
           />
-        </div>
-        <div>
           <Tooltip title="添加关注">
             <Button
               size={'middle'}

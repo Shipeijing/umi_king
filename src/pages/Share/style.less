@@ -1,67 +1,183 @@
-.content{
-  max-width: 1500px;
+.content {
   width: 100%;
-  margin: 0 auto;
   position: relative;
 }
+
+@media screen and (max-width: 1500px) {
+  .index {
+    width: calc(~'100% - 40px') !important;
+  }
+}
+
 .index {
-  width: 100%;
-  
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+
   >div {
-    &:nth-of-type(4) {
-      height: calc(~'100vh - 230px');
-      overflow: auto;
+    &:nth-of-type(2) {
+      width: calc(~'100% - 0px');
       border-radius: 0px !important;
+      padding: 0 !important;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      >div {
+        background: #ffffff;
+        box-shadow: 0 0px 5px @box-shadow-bg-me;
+
+        &:nth-of-type(1) {
+          width: calc(~'100% - 300px');
+          height: calc(~'100vh - 200px');
+        }
+
+        &:nth-of-type(2) {
+          width: 280px;
+          height: calc(~'100vh - 200px');
+          float: right;
+        }
+      }
+
+      .TabsBody {
+        height: calc(~'100vh - 250px');
+        overflow: auto;
+      }
+
+      :global(.ant-tabs-nav-scroll) {
+        background: #33302b;
+        height: 100%;
+      }
+
+      :global(.ant-tabs-nav .ant-tabs-tab) {
+        color: #ffffff;
+        padding: 15px 25px;
+        margin: 0 !important;
+      }
+
+      :global(.ant-tabs-nav .ant-tabs-tab-active) {
+        color: @primary-color;
+        background: rgba(255, 255, 255, 0.2);
+      }
     }
 
-    background: #ffffff;
-    border-radius: 10px;
-    width: calc(~'90% - 380px');
-    margin: 20px calc(~'5% + 270px') 0 calc(~'5% + 110px');
-    box-shadow: 0 0px 5px @box-shadow-bg-me;
-    padding: 20px;
+    border-radius: 0px;
+    width: 100%;
+  }
+}
+
+.TabsBody {
+  :global(.ant-list-item-meta-title) {
+    color: #33302b;
+    font-weight: 900;
+    margin-bottom: 0px;
+  }
+
+  :global(.ant-list-item-meta-description) {
+    color: #33302b;
+  }
+
+  :global(.ant-list-item-main) {
+    font-size: 15px;
+    color: #33302b;
+  }
+
+  :global(.ant-list-vertical .ant-list-item-meta) {
+    margin-bottom: 10px;
+  }
+
+  :global(.ant-list-item-action) {
+    >li {
+      color: #33302b !important;
+
+      :global(.ant-list-item-action-split) {
+        background: #753535;
+      }
+
+      &:nth-of-type(6) {
+        float: right;
+      }
+
+      &:nth-of-type(4) {
+        float: right;
+
+        :global(.ant-list-item-action-split) {
+          width: 0 !important;
+        }
+      }
+
+      &:nth-of-type(5) {
+        float: right;
+
+        :global(.ant-list-item-action-split) {
+          width: 0 !important;
+        }
+      }
+
+      &:nth-of-type(3) {
+        :global(.ant-list-item-action-split) {
+          width: 0 !important;
+        }
+      }
+    }
   }
 }
 
 .indexNav {
+  margin: 20px 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: calc(~'90% - 130px') !important;
 
   >div {
+    background: #ffffff;
+    box-shadow: 0 0px 5px @box-shadow-bg-me;
+    padding: 18px 20px;
+
+    &:nth-of-type(1) {
+      width: calc(~'100% - 300px');
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      >div {
+        &:nth-of-type(2) {
+          width: calc(~'100% - 240px');
+
+          >span {
+            background: #f8f8f8;
+            color: @primary-color;
+
+            input {
+              background: #f8f8f8;
+
+            }
+          }
+        }
+      }
+    }
+
     &:nth-of-type(2) {
-      width: calc(~'100% - 180px');
+      width: 280px;
+      padding: 10px 20px !important;
+
+      ul {
+        li {
+          width: 25%;
+          text-align: center;
+          float: left;
+
+          >p {
+            font-size: 12px;
+            margin-top: 5px;
+          }
+        }
+      }
     }
   }
 }
 
 .bodyContent {
   padding: 30px;
-}
-
-.navBut {
-  position: absolute;
-  width: 120px !important;
-  background: none !important;
-  box-shadow: none !important;
-  left: calc(~'5% - 0px');
-  top: 115px;
-  margin: 0 auto !important;
-  padding: 0 !important;
-
-  button {
-    margin: 10px 0;
-  }
-}
-
-.navright {
-  position: absolute;
-  width: 250px !important;
-  background: none !important;
-  box-shadow: none !important;
-  right: calc(~'5% + 0px');
-  top: 90px;
-  margin: 0 auto !important;
-  padding: 0 !important;
 }

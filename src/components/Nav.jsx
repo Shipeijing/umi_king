@@ -8,7 +8,8 @@ import {
   MessageOutlined,
   FireOutlined,
   TeamOutlined,
-  BellOutlined,
+  MessageFilled,
+  BellFilled,
   ManOutlined,
   WomanOutlined,
 } from '@ant-design/icons';
@@ -48,7 +49,7 @@ function NavPage(props) {
           </Menu.Item>
           <Menu.Item key="/Share">
             <FireOutlined />
-            动态
+            世界
           </Menu.Item>
           <Menu.Item key="/Chat">
             <MessageOutlined />
@@ -80,19 +81,13 @@ function NavPage(props) {
             ) : (
               <WomanOutlined style={{ color: '#f5222d' }} />
             )}
-            <span style={{ margin: '0 15px' }}>{props.UserData.Address}</span>
           </div>
-          <Badge dot={true} count={1}>
-            <BellOutlined style={{ fontSize: 20 }} />
+          <Badge style={{ backgroundColor: '#ffbf00' }} count={1}>
+            <MessageFilled style={{ fontSize: 20, marginLeft: 20 }} />
           </Badge>
-          <Select
-            defaultValue="中 文"
-            style={{ width: 95, marginLeft: 10 }}
-            bordered={false}
-          >
-            <Option value="jack">中 文</Option>
-            <Option value="jack">English</Option>
-          </Select>
+          <Badge count={1}>
+            <BellFilled style={{ fontSize: 22, marginLeft: 20 }} />
+          </Badge>
         </div>
       </div>
     </div>

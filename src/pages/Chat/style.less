@@ -10,7 +10,7 @@
 
 .chatMessage {
   flex-wrap: wrap;
-  height: calc(~'100vh - 430px');
+  height: calc(~'100vh - 410px');
   overflow: auto;
   display: flex;
   padding: 0 10px !important;
@@ -37,6 +37,12 @@
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .chat {
+    width: calc(~'100% - 80px') !important;
+  }
+}
+
 .chat {
   width: 80%;
   max-width: 1200px;
@@ -45,7 +51,7 @@
 
   >div {
     &:nth-of-type(3) {
-      height: calc(~'100vh - 300px');
+      height: calc(~'100vh - 260px');
     }
 
     &:nth-of-type(2) {

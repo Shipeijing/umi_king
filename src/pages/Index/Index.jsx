@@ -18,26 +18,6 @@ function IndexPage(props) {
       payload: { visible: !props.visible },
     });
   };
-  const Setting = (
-    <ul className={styles.indexUser_Setting}>
-      <li>
-        <FlagOutlined />
-        &nbsp;招募队友
-      </li>
-      <li>
-        <MessageOutlined />
-        &nbsp;打开聊天窗
-      </li>
-      <li>
-        <SettingOutlined />
-        &nbsp;修改战队信息
-      </li>
-      <li style={{ color: '#f5222d' }}>
-        <LogoutOutlined />
-        &nbsp;退出战队
-      </li>
-    </ul>
-  );
   return (
     <div className={styles.index}>
       <Drawer
@@ -81,7 +61,7 @@ function IndexPage(props) {
               <Card style={{ background: '#e7e7e7' }}>
                 <Statistic
                   title="峰值人数"
-                  value={51684615}
+                  value={51615}
                   valueStyle={{ color: '#cf1322' }}
                   suffix="人"
                 />
@@ -99,13 +79,15 @@ function IndexPage(props) {
             </Col>
           </Row>
         </div>
-        <div>采用umi+dva+ant技术栈制作 ——— 2020.5.15</div>
+        <div style={{ width: '100%' }}>
+          采用umi+dva+ant技术栈制作 ——— 2020.5.15
+        </div>
       </div>
       <div className={styles.indexBody}>
         <div>
           <Avatar
             shape="square"
-            style={{ width: 150, height: 150 }}
+            style={{ width: 200, height: 200 }}
             src={require('../../assets/img/logo.png')}
           />
           <h1>斑 鹿</h1>

@@ -1,9 +1,11 @@
 html,
 body,
 #root {
-    min-width: 850px;
-    height: 100%;
-    background: #e7e7e7;
+  min-width: 777px;
+  min-height: 777px;
+  height: 100%;
+  background: #e7e7e7;
+  position: relative;
 }
 
 HTML,
@@ -29,17 +31,17 @@ fieldset,
 table,
 th,
 td {
-    border: none;
-    font-family: "微软雅黑", "黑体", "宋体";
-    font-size: 14px;
-    margin: 0px;
-    padding: 0px;
+  border: none;
+  font-family: "微软雅黑", "黑体", "宋体";
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 address,
@@ -51,113 +53,113 @@ em,
 strong,
 th,
 var {
-    font-style: normal;
-    font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:link {
-    color: #fff;
+  color: #fff;
 }
 
 a:visited {
-    color: #fff;
+  color: #fff;
 }
 
 a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 a:active {
-    color: #fff;
+  color: #fff;
 }
 
 input::-ms-clear {
-    display: none;
+  display: none;
 }
 
 input::-ms-reveal {
-    display: none;
+  display: none;
 }
 
 input {
-    -webkit-appearance: none;
-    margin: 0;
-    outline: none;
-    padding: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
 }
 
 input::-webkit-input-placeholder {
-    color: #ccc;
+  color: #ccc;
 }
 
 input::-ms-input-placeholder {
-    color: #ccc;
+  color: #ccc;
 }
 
 input::-moz-placeholder {
-    color: #ccc;
+  color: #ccc;
 }
 
 input[type=submit],
 input[type=button] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button[disabled],
 input[disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 img {
-    border: none;
+  border: none;
 }
 
 ul,
 ol,
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 
 /*公共方法*/
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .clearleft {
-    clear: left;
+  clear: left;
 }
 
 .clearright {
-    clear: right;
+  clear: right;
 }
 
 .floatleft {
-    float: left;
+  float: left;
 }
 
 .floatright {
-    float: right;
+  float: right;
 }
 
 .cursor {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
 /*背景及色值表*/
 
 .bg000 {
-    background: #000;
+  background: #000;
 }
 
 .color000 {
-    color: #000;
+  color: #000;
 }
 
 address,
@@ -165,62 +167,62 @@ cite,
 dfn,
 em,
 var {
-    font-style: normal;
+  font-style: normal;
 }
 
 code,
 kbd,
 pre,
 samp {
-    font-family: couriernew, courier, monospace;
+  font-family: couriernew, courier, monospace;
 }
 
 small {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 sup {
-    vertical-align: text-top;
+  vertical-align: text-top;
 }
 
 sub {
-    vertical-align: text-bottom;
+  vertical-align: text-bottom;
 }
 
 legend {
-    color: #000;
+  color: #000;
 }
 
 fieldset,
 img {
-    border: 0;
+  border: 0;
 }
 
 button,
 input,
 select,
 textarea {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 #nprogress .bar {
-    background: #ffbf00 !important;
+  background: #ffbf00 !important;
 }

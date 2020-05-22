@@ -1,15 +1,15 @@
 .index {
   width: 100%;
   margin: 0 auto;
-  padding-top: 8vh;
+  padding-top: 4vh;
 
   >div {
-    width: 850px;
+    width: 777px;
     margin: 0 auto;
     text-align: center;
 
     h1 {
-      margin: 10px 0;
+      margin: 5px 0;
       font-size: 34px;
       font-weight: 900;
       color: #33302b;
@@ -29,7 +29,7 @@
       align-items: center;
       height: 100px;
       width: 600px;
-      margin: 8vh auto 0 auto;
+      margin: 5vh auto 0 auto;
       color: #ffffff;
 
       >span {
@@ -76,6 +76,7 @@
 }
 
 .nav {
+  min-width: 777px;
   width: 100% !important;
   height: 250px;
   background: #33302b;
@@ -88,7 +89,10 @@
   justify-content: center;
 
   >div {
-    width: 1000px !important;
+    &:nth-of-type(1) {
+      width: 777px !important;
+    }
+
     color: #777777;
   }
 }
@@ -119,17 +123,5 @@
 
   >span {
     margin: 10px 8px;
-  }
-}
-
-.indexUser_Setting {
-  li {
-    cursor: pointer;
-    padding: 10px;
-    border-top: 1px solid #e9e9e9;
-
-    &:nth-of-type(1) {
-      border-top: none;
-    }
   }
 }
