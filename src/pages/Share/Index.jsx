@@ -110,9 +110,10 @@ function IndexPage(props) {
         <div className={styles.indexNav}>
           <div>
             <div>
-              <Radio.Group size="large" defaultValue="热度" buttonStyle="solid">
+              <Radio.Group size="large" defaultValue="热度">
                 <Radio.Button value="热度">热度</Radio.Button>
                 <Radio.Button value="最新">最新</Radio.Button>
+                <Radio.Button value="推荐">推荐</Radio.Button>
               </Radio.Group>
             </div>
             <div>
@@ -122,18 +123,6 @@ function IndexPage(props) {
                 placeholder="input search text"
                 onSearch={value => console.log(value)}
                 style={{ width: '100%' }}
-              />
-            </div>
-            <div>
-              <Button
-                size="large"
-                onClick={() => {
-                  setDrawerDom.changeVisible();
-                }}
-                ghost
-                type="primary"
-                shape="circle"
-                icon={<TagOutlined />}
               />
             </div>
           </div>
@@ -195,7 +184,7 @@ function IndexPage(props) {
           </div>
         </div>
         <div>
-          <Tabs tabPosition={'left'}>
+          <Tabs tabPosition={'top'}>
             <TabPane tab="综 合" key="1">
               <div className={styles.TabsBody}>
                 {props.bodyStatus === null ? (
@@ -303,14 +292,18 @@ function IndexPage(props) {
             </TabPane>
           </Tabs>
           <div className={styles.navRight}>
-            <ul>
-              <li>写动态</li>
-              <li>发问答</li>
-              <li>说观点</li>
-              <li>写小说</li>
-              <li>好音乐</li>
-              <li>好视频</li>
-            </ul>
+            <div></div>
+            <div>
+              <ul>
+                <li>写动态</li>
+                <li>发问答</li>
+                <li>说观点</li>
+                <li>写小说</li>
+                <li>好音乐</li>
+                <li>好视频</li>
+              </ul>
+            </div>
+            <div></div>
           </div>
         </div>
       </div>

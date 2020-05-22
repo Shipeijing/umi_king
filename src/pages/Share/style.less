@@ -25,23 +25,39 @@
       justify-content: space-between;
 
       >div {
-        background: #ffffff;
-        box-shadow: 0 0px 5px @box-shadow-bg-me;
-
         &:nth-of-type(1) {
           width: calc(~'100% - 300px');
           height: calc(~'100vh - 200px');
+          background: #ffffff;
+          box-shadow: 0 0px 5px @box-shadow-bg-me;
         }
 
         &:nth-of-type(2) {
-          width: 280px;
-          height: calc(~'100vh - 200px');
-          float: right;
+          width: 290px;
+
+          >div {
+
+            background: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0px 5px @box-shadow-bg-me;
+
+            &:nth-of-type(1) {
+              height: 200px;
+            }
+
+            &:nth-of-type(2) {
+              height: 200px;
+            }
+
+            &:nth-of-type(3) {
+              height: 300px;
+            }
+          }
         }
       }
 
       .TabsBody {
-        height: calc(~'100vh - 250px');
+        height: calc(~'100vh - 265px');
         overflow: auto;
       }
 
@@ -125,7 +141,7 @@
 }
 
 .indexNav {
-  margin: 20px 0;
+  margin: 10px 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -143,7 +159,7 @@
 
       >div {
         &:nth-of-type(2) {
-          width: calc(~'100% - 240px');
+          width: 30%;
 
           >span {
             background: #f8f8f8;
@@ -159,7 +175,7 @@
     }
 
     &:nth-of-type(2) {
-      width: 280px;
+      width: 290px;
       padding: 10px 20px !important;
 
       ul {
